@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: bronze_sales
+    columns:
+      - name: sales_id
+        data_tests:
+          - unique
+          - not_null
+      - name: store_id
+        data_tests:
+          - not_null
+      - name: gross_amount
+        data_tests:
+          - generic_non_negative
